@@ -6,17 +6,17 @@
 #    By: mdoudi-b <mdoudi-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/21 16:27:09 by mdoudi-b          #+#    #+#              #
-#    Updated: 2025/06/21 16:41:20 by mdoudi-b         ###   ########.fr        #
+#    Updated: 2025/06/24 13:55:53 by mdoudi-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Variables básicas
-NAME = megaphone
+NAME = phonebook
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Archivos
-SRCS = megaphone.cpp
+SRCS = main.cpp phonebook.cpp contact.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Regla principal
