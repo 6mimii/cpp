@@ -6,7 +6,7 @@
 /*   By: mdoudi-b <mdoudi-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 14:35:20 by mdoudi-b          #+#    #+#             */
-/*   Updated: 2025/06/24 17:48:57 by mdoudi-b         ###   ########.fr       */
+/*   Updated: 2025/06/27 18:35:47 by mdoudi-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,10 @@ int main()
 		}
 		else if (command == "SEARCH")
 		{
+			phonebook.displayContacts();
+			std::string input;
+			std::cout << "Enter index to view details: ";
+			std::getline(std::cin, input);
 			
 		}
 		else
