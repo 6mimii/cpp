@@ -6,10 +6,11 @@
 /*   By: mdoudi-b <mdoudi-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 14:35:20 by mdoudi-b          #+#    #+#             */
-/*   Updated: 2025/06/27 18:35:47 by mdoudi-b         ###   ########.fr       */
+/*   Updated: 2025/06/30 20:00:47 by mdoudi-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <sstream>
 #include <iostream>
 #include <string>
 #include "contact.hpp"
@@ -63,7 +64,13 @@ int main()
 			std::string input;
 			std::cout << "Enter index to view details: ";
 			std::getline(std::cin, input);
-			
+			int index = -1;
+			if (!input.empty() && input.find_first_not_of("0123456789") == std::string::npos)
+			{
+				std::istringstream iss(input);
+				iss >> index;	
+			}
+			phonebook.displayContact(index);
 		}
 		else
 		{
