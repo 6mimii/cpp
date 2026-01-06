@@ -1,17 +1,19 @@
-NAME = animal
+NAME = convert
 
-CXX= g++
-CXXFLAGS= -Wall -Werror -Wextra -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC= main.cpp dog.cpp cat.cpp wronganimal.cpp wrongcat.cpp
-OBJ= $(SRC:.cpp=.o)
+SRC = main.cpp ScalarConverter.cpp
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 clean:
 	rm -f $(OBJ)
 
